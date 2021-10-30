@@ -9,6 +9,7 @@ class ShowAccount(UserAdmin):
     list_display_links = ('email', 'first_name', 'username', 'last_name')
     readonly_fields = ('last_login', 'date_joined')
     ordering = ('date_joined',)
+    search_fields = ['email', ]
     filter_horizontal = ()
     list_filter = ()
     fieldsets = ()
