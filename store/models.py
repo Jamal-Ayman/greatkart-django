@@ -40,10 +40,7 @@ variation_category_choice = (
 
 
 class Variation(models.Model):
-    #product_category = models.ForeignKey(Category, blank=True, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    #cities = City.objects.filter(country_id=country_id).order_by('product_name')
-    #product = Product.objects.filter(product_category=product_category).order_by
     variation_category = models.CharField(max_length=100, choices=variation_category_choice)
     variation_value = models.CharField(max_length=100)
     is_active = models.BooleanField(default=True)
